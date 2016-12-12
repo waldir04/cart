@@ -1,0 +1,15 @@
+{
+    "html": [
+        "src/*.html"
+    ],
+    "styles": [
+        "src/assets/styles/**/*.scss"
+    ],
+    "css": [
+        "src/assets/css"
+    ],
+    "components": [
+        "src/components/**/*.js", 
+        "src/components/**/*.html"
+    ]
+}

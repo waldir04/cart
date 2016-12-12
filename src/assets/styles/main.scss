@@ -1,0 +1,33 @@
+.shopping-page {
+    .ui {
+        &.menu {
+            &.fixed {
+                &.nav { 
+                    z-index: 999;
+                    padding: 20px 0;  
+                }                
+            }            
+        }
+        &.dropdown {
+            &.item {
+                >.menu {
+                    width: 200px;
+                    >.item { padding: 20px !important; }
+                }
+            }
+        }
+        &.sticky {
+            height: 50px;
+            &.menu.fixed {
+                border-right: initial;
+                border-top: initial;
+            }
+        }
+    }
+    #content {
+        margin-top: 120px;
+        >.grid {
+            margin-top: 20px;
+        }               
+    }
+}
