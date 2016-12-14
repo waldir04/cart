@@ -2,11 +2,33 @@
     .ui {
         &.menu {
             &.fixed {
-                &.nav { 
+                &.nav {
                     z-index: 999;
-                    padding: 20px 0;  
-                }                
-            }            
+                    padding: 10px 0;
+                }
+            }
+            &.vertical {
+                width: 101%;
+                &.fixed {
+                    border-right: initial;
+                    border-top: initial;
+                }
+                >.menu {
+                    min-height: 50px;
+                    border: initial;
+                    .search {
+                        &:not(.icon) { border-left: 1px solid rgba(34, 36, 38, 0.15); }
+                        >.input { height: 100%; }
+                    }
+                }
+                >.segment {
+                    border-bottom: initial;
+                    .fields {
+                        margin-bottom: 0;
+                        .checkbox { margin-top: 8px; }
+                    }
+                }
+            }
         }
         &.dropdown {
             &.item {
@@ -16,18 +38,43 @@
                 }
             }
         }
-        &.sticky {
-            height: 50px;
-            &.menu.fixed {
-                border-right: initial;
-                border-top: initial;
+        &.card {
+            >.content {
+                .meta {
+                    display: block;
+                    display: -webkit-box;
+                    max-width: 400px;
+                    height: 55px;
+                    margin: 0 auto;
+                    -webkit-line-clamp: 3;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
             }
+        }
+        &.notification-bubble {
+            border-radius: 50%;
+            height: 25px;
+            min-width: 25px;
+            display: inline-block;
+            font-size: 12px;
+            line-height: 25px;
+            text-align: center;
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 0 4px !important;
+            font-weight: 700;
         }
     }
     #content {
-        margin-top: 120px;
+        margin-top: 95px;
         >.grid {
             margin-top: 20px;
-        }               
+        }
+        .order-by {
+            .header { cursor: pointer; }
+        }
     }
 }

@@ -1,159 +1,638 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="cart">
-    <head>
-        <title>:::</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        
-        <!-- build:css assets/css/vendor.min.css -->
-        <link rel="stylesheet" type="text/css" href="../bower_components/semantic/dist/semantic.css">
-        <!-- endbuild -->
-        
-        <!-- build:css assets/css/styles.min.css -->
-        <link rel="stylesheet" type="text/css" href="assets/css/main.css">
-        <!-- endbuild -->        
-    </head>
-    <body class="shopping-page">
-        <div class="ui fixed menu nav">
-            <div class="ui container">
-                <a href="#" class="header item">                    
-                    Project Name
-                </a>
-                <a href="#" class="item">Home</a>
-                <div class="right menu">
-                    <div class="ui icon top right pointing dropdown button item">
-                        <i class="in cart icon big"></i>
-                        <div class="menu">
-                            <div class="item">Item 1</div>
-                            <div class="item">Item 2</div>
-                            <div class="item">Item 3</div>
-                            <div class="item">Item 4</div>
-                            <div class="divider"></div>
-                            <div class="header">Total</div>
-                        </div>
+<head>
+    <title>:::</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- build:css assets/css/vendor.min.css -->
+    <link rel="stylesheet" type="text/css" href="../bower_components/semantic/dist/semantic.css">
+    <!-- endbuild -->
+
+    <!-- build:css assets/css/styles.min.css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+    <!-- endbuild -->
+</head>
+<body class="shopping-page">
+    <div class="ui fixed menu nav">
+        <div class="ui container">
+            <a href="#" class="header item">
+                Project Name
+            </a>
+            <a href="#" class="item">Home</a>
+            <div class="right menu">
+                <div class="ui icon top right pointing dropdown button item">
+                    <i class="in cart icon big"></i>
+                    <div class="ui green label notification-bubble">22</div>
+                    <div class="menu">
+                        <div class="item">Item 1</div>
+                        <div class="item">Item 2</div>
+                        <div class="item">Item 3</div>
+                        <div class="item">Item 4</div>
+                        <div class="divider"></div>
+                        <div class="header">Total</div>
                     </div>
-                </div>               
+                </div>
             </div>
         </div>
-        <div class="ui container" id="content">
-            <div class="ui sticky top attached menu">
+    </div>
+    <div class="ui container" id="content">
+        <div class="ui sticky top attached menu vertical">
+            <div class="ui menu">
+                <div class="left menu">
+                    <div class="ui form item">
+                        <div class="field">
+                            <label>Ordenar por:</label>
+                        </div>
+                        <div class="fields order-by">
+                            <div class="field">
+                                <div class="ui header small">
+                                    <i class="chevron down icon"></i>
+                                    Nombre
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="ui header small  grey inverted">
+                                    <i class="chevron down icon"></i>
+                                    Precio
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="right menu">
                     <div class="ui right aligned category search item">
                         <div class="ui transparent icon input">
-                            <input class="prompt" type="text" placeholder="Search animals...">
+                            <input class="prompt" type="text" placeholder="Buscar...">
                             <i class="search link icon"></i>
                         </div>
                         <div class="results"></div>
                     </div>
-                </div>    
-            </div>
-            <div class="ui bottom attached segment">
-                <div class="ui three column grid  stackable">                
-                    <div class="column">
-                        <div class="ui segment">
-                            <img class="ui image" src="http://semantic-ui.com/images/wireframe/image.png">
-                        </div>
-                    </div>
-                    <div class="column">
-                        <div class="ui segment">
-                            <img class="ui image" src="http://semantic-ui.com/images/wireframe/image.png">
-                        </div>
-                    </div>
-                    <div class="column">
-                        <div class="ui segment">
-                            <img class="ui image" src="http://semantic-ui.com/images/wireframe/image.png">
-                        </div>
-                    </div>
-                    <div class="column">
-                        <div class="ui segment">
-                            <img class="ui image" src="http://semantic-ui.com/images/wireframe/image.png">
-                        </div>                    
-                    </div>
-                    <div class="column">
-                        <div class="ui segment">
-                            <img class="ui image" src="http://semantic-ui.com/images/wireframe/image.png">
-                        </div>
-                    </div>
-                    <div class="column">
-                        <div class="ui segment">
-                            <img class="ui image" src="http://semantic-ui.com/images/wireframe/image.png">
-                        </div>
-                    </div>
-                    <div class="column">
-                        <div class="ui segment">
-                            <img class="ui image" src="http://semantic-ui.com/images/wireframe/image.png">
-                        </div>
-                    </div>
-                    <div class="column">
-                        <div class="ui segment">
-                            <img class="ui image" src="http://semantic-ui.com/images/wireframe/image.png">
-                        </div>                    
-                    </div>
-                    <div class="column">
-                        <div class="ui segment">
-                            <img class="ui image" src="http://semantic-ui.com/images/wireframe/image.png">
-                        </div>
-                    </div>
-                    <div class="column">
-                        <div class="ui segment">
-                            <img class="ui image" src="http://semantic-ui.com/images/wireframe/image.png">
-                        </div>
-                    </div>
-                    <div class="column">
-                        <div class="ui segment">
-                            <img class="ui image" src="http://semantic-ui.com/images/wireframe/image.png">
-                        </div>
-                    </div>
-                    <div class="column">
-                        <div class="ui segment">
-                            <img class="ui image" src="http://semantic-ui.com/images/wireframe/image.png">
-                        </div>                    
-                    </div>
-                    <div class="column">
-                        <div class="ui segment">
-                            <img class="ui image" src="http://semantic-ui.com/images/wireframe/image.png">
-                        </div>
-                    </div>
-                    <div class="column">
-                        <div class="ui segment">
-                            <img class="ui image" src="http://semantic-ui.com/images/wireframe/image.png">
-                        </div>
-                    </div>
-                    <div class="column">
-                        <div class="ui segment">
-                            <img class="ui image" src="http://semantic-ui.com/images/wireframe/image.png">
-                        </div>
-                    </div>
-                    <div class="column">
-                        <div class="ui segment">
-                            <img class="ui image" src="http://semantic-ui.com/images/wireframe/image.png">
-                        </div>                    
-                    </div>
-                    <div class="column">
-                        <div class="ui segment">
-                            <img class="ui image" src="http://semantic-ui.com/images/wireframe/image.png">
-                        </div>
-                    </div>
-                    <div class="column">
-                        <div class="ui segment">
-                            <img class="ui image" src="http://semantic-ui.com/images/wireframe/image.png">
-                        </div>
-                    </div>          
                 </div>
-            </div>            
+            </div>
+            <div class="ui attached segment">
+                <div class="ui grid">
+                    <div class="sixteen wide column">
+                        <div class="ui form small">
+                            <div class="field">
+                                <label>Filtrar por:</label>
+                            </div>
+                            <div class="fields">
+                                <div class="field">
+                                    <select class="ui dropdown" multiple="">
+                                        <option value="">Categoria</option>
+                                        <option value="1">Categoria 1</option>
+                                        <option value="2">Categoria 2</option>
+                                        <option value="3">Categoria 3</option>
+                                        <option value="4">Categoria 4</option>
+                                    </select>
+                                </div>
+                                <div class="field">
+                                    <div class="ui checkbox">
+                                        <input type="checkbox" name="example">
+                                        <label>Disponibles</label>
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <div class="ui checkbox">
+                                        <input type="checkbox" name="example">
+                                        <label>Agotados</label>
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <div class="ui checkbox">
+                                        <input type="checkbox" name="example">
+                                        <label>Más vendidos</label>
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <div class="ui checkbox">
+                                        <input type="checkbox" name="example">
+                                        <label>Mayor de $30,000</label>
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <div class="ui checkbox">
+                                        <input type="checkbox" name="example">
+                                        <label>Menor de $10,000</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-                
-        <!-- build:js assets/js/vendor.min.js -->
-        <script type="text/javascript" src="../bower_components/jquery/dist/jquery.js"></script>
-        <script type="text/javascript" src="../bower_components/semantic/dist/semantic.js"></script>
-        <script type="text/javascript" src="../bower_components/angular/angular.js"></script>
-        <script type="text/javascript" src="../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-        <!-- endbuild -->
-        
-        <!-- build:js assets/js/scritps.min.js -->
-        <script type="text/javascript" src="components/app.js"></script>
-        <script type="text/javascript" src="components/routes.js"></script>
-        <script type="text/javascript" src="components/products/list/productlist.controller.js"></script>
-        <!-- endbuild -->
-    </body>
+
+        <div class="ui bottom attached segment">
+            <div class="ui four column grid stackable">
+                <div class="column">
+                    <div class="ui raised link fluid card">
+                        <div class="blurring dimmable image">
+                            <div class="ui dimmer">
+                                <div class="content">
+                                    <div class="center">
+                                        <i class="circular inverted green add to cart icon big"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <a class="ui yellow left corner label">
+                                <i class="star icon"></i>
+                            </a>
+                            <img src="http://lorempixel.com/200/100/food/">
+                        </div>
+                        <div class="content">
+                            <div class="header">Lorem</div>
+                            <div class="meta">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu.
+                            </div>
+                            <div class="description">
+                                $60.000
+                            </div>
+                        </div>
+                        <div class="extra content">
+                            <a class="ui orange label">Orange</a>
+                            <a class="ui yellow label">Yellow</a>
+                        </div>
+                        <div class="ui red top right attached label">
+                            Not available
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="ui raised link fluid card">
+                        <div class="blurring dimmable image">
+                            <div class="ui dimmer">
+                                <div class="content">
+                                    <div class="center">
+                                        <i class="circular inverted green add to cart icon big"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <img src="http://lorempixel.com/200/100/food/">
+                        </div>
+                        <div class="content">
+                            <div class="header">Lorem</div>
+                            <div class="meta">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu.
+                            </div>
+                            <div class="description">
+                                $60.000
+                            </div>
+                        </div>
+                        <div class="extra content">
+                            <a class="ui orange label">Orange</a>
+                            <a class="ui yellow label">Yellow</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="ui raised link fluid card">
+                        <div class="blurring dimmable image">
+                            <div class="ui dimmer">
+                                <div class="content">
+                                    <div class="center">
+                                        <i class="circular inverted green add to cart icon big"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <img src="http://lorempixel.com/200/100/food/">
+                        </div>
+                        <div class="content">
+                            <div class="header">Lorem</div>
+                            <div class="meta">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu.
+                            </div>
+                            <div class="description">
+                                $60.000
+                            </div>
+                        </div>
+                        <div class="extra content">
+                            <a class="ui orange label">Orange</a>
+                            <a class="ui yellow label">Yellow</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="ui raised link fluid card">
+                        <div class="blurring dimmable image">
+                            <div class="ui dimmer">
+                                <div class="content">
+                                    <div class="center">
+                                        <i class="circular inverted green add to cart icon big"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <img src="http://lorempixel.com/200/100/food/">
+                        </div>
+                        <div class="content">
+                            <div class="header">Lorem</div>
+                            <div class="meta">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu.
+                            </div>
+                            <div class="description">
+                                $60.000
+                            </div>
+                        </div>
+                        <div class="extra content">
+                            <a class="ui orange label">Orange</a>
+                            <a class="ui yellow label">Yellow</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="ui raised link fluid card">
+                        <div class="blurring dimmable image">
+                            <div class="ui dimmer">
+                                <div class="content">
+                                    <div class="center">
+                                        <i class="circular inverted green add to cart icon big"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <img src="http://lorempixel.com/200/100/food/">
+                        </div>
+                        <div class="content">
+                            <div class="header">Lorem</div>
+                            <div class="meta">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu.
+                            </div>
+                            <div class="description">
+                                $60.000
+                            </div>
+                        </div>
+                        <div class="extra content">
+                            <a class="ui orange label">Orange</a>
+                            <a class="ui yellow label">Yellow</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="ui raised link fluid card">
+                        <div class="blurring dimmable image">
+                            <div class="ui dimmer">
+                                <div class="content">
+                                    <div class="center">
+                                        <i class="circular inverted green add to cart icon big"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <img src="http://lorempixel.com/200/100/food/">
+                        </div>
+                        <div class="content">
+                            <div class="header">Lorem</div>
+                            <div class="meta">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu.
+                            </div>
+                            <div class="description">
+                                $60.000
+                            </div>
+                        </div>
+                        <div class="extra content">
+                            <a class="ui orange label">Orange</a>
+                            <a class="ui yellow label">Yellow</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="ui raised link fluid card">
+                        <div class="blurring dimmable image">
+                            <div class="ui dimmer">
+                                <div class="content">
+                                    <div class="center">
+                                        <i class="circular inverted green add to cart icon big"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <img src="http://lorempixel.com/200/100/food/">
+                        </div>
+                        <div class="content">
+                            <div class="header">Lorem</div>
+                            <div class="meta">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu.
+                            </div>
+                            <div class="description">
+                                $60.000
+                            </div>
+                        </div>
+                        <div class="extra content">
+                            <a class="ui orange label">Orange</a>
+                            <a class="ui yellow label">Yellow</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="ui raised link fluid card">
+                        <div class="blurring dimmable image">
+                            <div class="ui dimmer">
+                                <div class="content">
+                                    <div class="center">
+                                        <i class="circular inverted green add to cart icon big"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <img src="http://lorempixel.com/200/100/food/">
+                        </div>
+                        <div class="content">
+                            <div class="header">Lorem</div>
+                            <div class="meta">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu.
+                            </div>
+                            <div class="description">
+                                $60.000
+                            </div>
+                        </div>
+                        <div class="extra content">
+                            <a class="ui orange label">Orange</a>
+                            <a class="ui yellow label">Yellow</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="ui raised link fluid card">
+                        <div class="blurring dimmable image">
+                            <div class="ui dimmer">
+                                <div class="content">
+                                    <div class="center">
+                                        <i class="circular inverted green add to cart icon big"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <img src="http://lorempixel.com/200/100/food/">
+                        </div>
+                        <div class="content">
+                            <div class="header">Lorem</div>
+                            <div class="meta">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu.
+                            </div>
+                            <div class="description">
+                                $60.000
+                            </div>
+                        </div>
+                        <div class="extra content">
+                            <a class="ui orange label">Orange</a>
+                            <a class="ui yellow label">Yellow</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="ui raised link fluid card">
+                        <div class="blurring dimmable image">
+                            <div class="ui dimmer">
+                                <div class="content">
+                                    <div class="center">
+                                        <i class="circular inverted green add to cart icon big"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <img src="http://lorempixel.com/200/100/food/">
+                        </div>
+                        <div class="content">
+                            <div class="header">Lorem</div>
+                            <div class="meta">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu.
+                            </div>
+                            <div class="description">
+                                $60.000
+                            </div>
+                        </div>
+                        <div class="extra content">
+                            <a class="ui orange label">Orange</a>
+                            <a class="ui yellow label">Yellow</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="ui raised link fluid card">
+                        <div class="blurring dimmable image">
+                            <div class="ui dimmer">
+                                <div class="content">
+                                    <div class="center">
+                                        <i class="circular inverted green add to cart icon big"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <img src="http://lorempixel.com/200/100/food/">
+                        </div>
+                        <div class="content">
+                            <div class="header">Lorem</div>
+                            <div class="meta">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu.
+                            </div>
+                            <div class="description">
+                                $60.000
+                            </div>
+                        </div>
+                        <div class="extra content">
+                            <a class="ui orange label">Orange</a>
+                            <a class="ui yellow label">Yellow</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="ui raised link fluid card">
+                        <div class="blurring dimmable image">
+                            <div class="ui dimmer">
+                                <div class="content">
+                                    <div class="center">
+                                        <i class="circular inverted green add to cart icon big"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <img src="http://lorempixel.com/200/100/food/">
+                        </div>
+                        <div class="content">
+                            <div class="header">Lorem</div>
+                            <div class="meta">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu.
+                            </div>
+                            <div class="description">
+                                $60.000
+                            </div>
+                        </div>
+                        <div class="extra content">
+                            <a class="ui orange label">Orange</a>
+                            <a class="ui yellow label">Yellow</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="ui raised link fluid card">
+                        <div class="blurring dimmable image">
+                            <div class="ui dimmer">
+                                <div class="content">
+                                    <div class="center">
+                                        <i class="circular inverted green add to cart icon big"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <img src="http://lorempixel.com/200/100/food/">
+                        </div>
+                        <div class="content">
+                            <div class="header">Lorem</div>
+                            <div class="meta">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu.
+                            </div>
+                            <div class="description">
+                                $60.000
+                            </div>
+                        </div>
+                        <div class="extra content">
+                            <a class="ui orange label">Orange</a>
+                            <a class="ui yellow label">Yellow</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="ui raised link fluid card">
+                        <div class="blurring dimmable image">
+                            <div class="ui dimmer">
+                                <div class="content">
+                                    <div class="center">
+                                        <i class="circular inverted green add to cart icon big"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <img src="http://lorempixel.com/200/100/food/">
+                        </div>
+                        <div class="content">
+                            <div class="header">Lorem</div>
+                            <div class="meta">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu.
+                            </div>
+                            <div class="description">
+                                $60.000
+                            </div>
+                        </div>
+                        <div class="extra content">
+                            <a class="ui orange label">Orange</a>
+                            <a class="ui yellow label">Yellow</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="ui raised link fluid card">
+                        <div class="blurring dimmable image">
+                            <div class="ui dimmer">
+                                <div class="content">
+                                    <div class="center">
+                                        <i class="circular inverted green add to cart icon big"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <img src="http://lorempixel.com/200/100/food/">
+                        </div>
+                        <div class="content">
+                            <div class="header">Lorem</div>
+                            <div class="meta">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu.
+                            </div>
+                            <div class="description">
+                                $60.000
+                            </div>
+                        </div>
+                        <div class="extra content">
+                            <a class="ui orange label">Orange</a>
+                            <a class="ui yellow label">Yellow</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="ui raised link fluid card">
+                        <div class="blurring dimmable image">
+                            <div class="ui dimmer">
+                                <div class="content">
+                                    <div class="center">
+                                        <i class="circular inverted green add to cart icon big"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <img src="http://lorempixel.com/200/100/food/">
+                        </div>
+                        <div class="content">
+                            <div class="header">Lorem</div>
+                            <div class="meta">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu.
+                            </div>
+                            <div class="description">
+                                $60.000
+                            </div>
+                        </div>
+                        <div class="extra content">
+                            <a class="ui orange label">Orange</a>
+                            <a class="ui yellow label">Yellow</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="ui raised link fluid card">
+                        <div class="blurring dimmable image">
+                            <div class="ui dimmer">
+                                <div class="content">
+                                    <div class="center">
+                                        <i class="circular inverted green add to cart icon big"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <img src="http://lorempixel.com/200/100/food/">
+                        </div>
+                        <div class="content">
+                            <div class="header">Lorem</div>
+                            <div class="meta">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu.
+                            </div>
+                            <div class="description">
+                                $60.000
+                            </div>
+                        </div>
+                        <div class="extra content">
+                            <a class="ui orange label">Orange</a>
+                            <a class="ui yellow label">Yellow</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="ui raised link fluid card">
+                        <div class="blurring dimmable image">
+                            <div class="ui dimmer">
+                                <div class="content">
+                                    <div class="center">
+                                        <i class="circular inverted green add to cart icon big"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <img src="http://lorempixel.com/200/100/food/">
+                        </div>
+                        <div class="content">
+                            <div class="header">Lorem</div>
+                            <div class="meta">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu.
+                            </div>
+                            <div class="description">
+                                $60.000
+                            </div>
+                        </div>
+                        <div class="extra content">
+                            <a class="ui orange label">Orange</a>
+                            <a class="ui yellow label">Yellow</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- build:js assets/js/vendor.min.js -->
+    <script type="text/javascript" src="../bower_components/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="../bower_components/semantic/dist/semantic.js"></script>
+    <script type="text/javascript" src="../bower_components/angular/angular.js"></script>
+    <script type="text/javascript" src="../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <!-- endbuild -->
+
+    <!-- build:js assets/js/scritps.min.js -->
+    <script type="text/javascript" src="components/app.js"></script>
+    <script type="text/javascript" src="components/routes.js"></script>
+    <script type="text/javascript" src="components/products/list/productlist.controller.js"></script>
+    <!-- endbuild -->
+</body>
 </html>
