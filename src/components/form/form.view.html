@@ -1,0 +1,33 @@
+<form class="ui form" name="form" novalidate="">
+    <h4 class="ui dividing header">Shipping Information</h4>
+    <div class="field">
+        <label>Name</label>
+        <div class="two fields">
+            <div class="field" ng-class="{'error': (form.$submitted || form.name.$touched) && form.name.$invalid}">
+                <input type="text" name="name" ng-model="user.name" placeholder="First Name" required="">
+            </div>
+            <div class="field">
+                <input type="text" placeholder="Last Name">
+            </div>
+        </div>
+    </div>
+    <div class="field">
+        <label>Billing Address</label>
+        <div class="two fields">
+            <div class="field" ng-class="{'error': (form.$submitted || form.email.$touched) && form.email.$invalid}">
+                <input type="email" name="email" placeholder="E-mail" ng-model="user.email" validate-email required="">
+            </div>
+            <div class="field">
+                <input type="number" placeholder="Phone">
+            </div>
+        </div>
+    </div>
+    <div class="ui error message visible" ng-show="form.$submitted && form.$invalid">
+        <ul class="list">
+            <li ng-if="form.name.$error.required">El nombre es requerido.</li>
+            <li ng-if="form.email.$error.required">Email es requerido.</li>
+            <li ng-if="form.email.$error.email">Email incorrecto.</li>
+        </ul>
+    </div>
+</form>
+<button class="ui button" tabindex="0" type="button" ng-click="register(form)">Submit Order</button>

@@ -3,7 +3,9 @@
 
     var app = angular.module('cart', [
         'routes',
-        'productlist.controller'
+        'productlist.controller',
+        'form.controller',
+        'form.directive'
     ]);
 
     $('.ui.sticky').sticky({context: '#content', offset: 70});
